@@ -12,6 +12,12 @@ export const auth = betterAuth({
     database: mongodbAdapter(db, {
         client,
     }),
+    session: {
+        cookieCache: {
+            enabled: true,
+            maxAge: 60 * 60,
+        },
+    },
     emailAndPassword: {
         enabled: true,
     },
@@ -22,10 +28,10 @@ export const auth = betterAuth({
                     if (user.id) {
                         await initializeUserBoard(user.id);
                     }
-                }
-            }
-        }
-    }
+                },
+            },
+        },
+    },
 });
 
 export async function getSession() {
