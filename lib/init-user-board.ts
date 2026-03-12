@@ -8,7 +8,7 @@ const DEFAULT_COLUMNS = [
     },
     { name: "Applied", order: 1 },
     { name: "Interviewing", order: 2 },
-    { name: "Offers", order: 3 },
+    { name: "Offer", order: 3 },
     { name: "Rejected", order: 4 },
 ];
 
